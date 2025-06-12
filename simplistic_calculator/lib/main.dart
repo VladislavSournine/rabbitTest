@@ -15,7 +15,7 @@ import 'package:window_size/window_size.dart';
 void main() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
     WidgetsFlutterBinding.ensureInitialized();
-    setWindowTitle('Simplistic Calculator');
+    setWindowTitle('Simplistic Calculator_????');
     setWindowMinSize(const Size(600, 500));
   }
 
