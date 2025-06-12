@@ -15,7 +15,7 @@ import 'package:window_size/window_size.dart';
 void main() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
     WidgetsFlutterBinding.ensureInitialized();
-    setWindowTitle('Simplistic Calculator_????');
+    setWindowTitle('Simplistic Calculator');
     setWindowMinSize(const Size(600, 500));
   }
 
@@ -55,10 +55,10 @@ class CalculatorEngine extends StateNotifier<CalculatorState> {
   CalculatorEngine()
     : super(
         const CalculatorState(
-          buffer: '0',
+          buffer: '1',
           calcHistory: [],
           mode: CalculatorEngineMode.result,
-          error: '',
+          error: 4,
         ),
       );
 
