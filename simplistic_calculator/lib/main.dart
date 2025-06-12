@@ -55,10 +55,10 @@ class CalculatorEngine extends StateNotifier<CalculatorState> {
   CalculatorEngine()
     : super(
         const CalculatorState(
-          buffer: '1',
+          buffer: '0',
           calcHistory: [],
           mode: CalculatorEngineMode.result,
-          error: 4,
+          error: '',
         ),
       );
 
