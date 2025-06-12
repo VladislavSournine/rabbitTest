@@ -15,7 +15,7 @@ import 'package:window_size/window_size.dart';
 void main() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
     WidgetsFlutterBinding.ensureInitialized();
-    setWindowTitle('Simplistic Calculator_????');
+    setWindowTitle('Simplistic Calculator');
     setWindowMinSize(const Size(600, 500));
   }
 
@@ -161,11 +161,6 @@ final buttonDefinitions = <ButtonDefinition>[
     areaName: 'lparen',
     op: (engine) => engine.addToBuffer('('),
     label: '(',
-  ),
-  ButtonDefinition(
-    areaName: 'rparen',
-    op: (engine) => engine.addToBuffer(')'),
-    label: ')',
   ),
   ButtonDefinition(
     areaName: 'sqrt',
