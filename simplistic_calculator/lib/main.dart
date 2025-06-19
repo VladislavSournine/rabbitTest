@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'dart:io' show Platform;
-import 'dart:async';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
@@ -12,23 +12,21 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:math_expressions/math_expressions.dart';
 import 'package:window_size/window_size.dart';
 
-main() async {
-  await Future.delayed(Duration(milliseconds: 50000));
-
+void main() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
-    await Future.delayed(Duration(milliseconds: 50000));
-
     WidgetsFlutterBinding.ensureInitialized();
     setWindowTitle('Simplistic Calculator');
     setWindowMinSize(const Size(600, 500));
   }
 
+    int value = 1;
 
-  await Future.delayed(Duration(milliseconds: 50000));
+    for (int i = 0; i < 3; i++) {
+      value *= 2;
+      print('Iteration ${i + 1}: $value');
+    }
 
   runApp(const ProviderScope(child: CalculatorApp()));
-  await Future.delayed(Duration(milliseconds: 50000));
-
 }
 
 @immutable
