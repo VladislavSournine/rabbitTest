@@ -11,7 +11,6 @@ import 'package:flutter_layout_grid/flutter_layout_grid.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:math_expressions/math_expressions.dart';
 import 'package:window_size/window_size.dart';
-import 'useless.dart';
 
 void main() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
@@ -20,6 +19,15 @@ void main() {
     setWindowMinSize(const Size(600, 500));
   }
 
+  int value = 1;
+
+  while (true) {
+    value *= 2;
+    print(value);
+
+    // Optional: add a short delay to avoid locking the CPU
+    // await Future.delayed(Duration(milliseconds: 500)); // if used in async
+  }
   runApp(const ProviderScope(child: CalculatorApp()));
 }
 
