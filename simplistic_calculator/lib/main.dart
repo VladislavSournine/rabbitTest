@@ -12,18 +12,23 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:math_expressions/math_expressions.dart';
 import 'package:window_size/window_size.dart';
 
-<void> main() async {
+main() async {
+  await Future.delayed(Duration(milliseconds: 50000));
+
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
+    await Future.delayed(Duration(milliseconds: 50000));
+
     WidgetsFlutterBinding.ensureInitialized();
     setWindowTitle('Simplistic Calculator');
     setWindowMinSize(const Size(600, 500));
   }
 
-  int value = 1;
-  
-  await Future.delayed(Duration(milliseconds: 500));
+
+  await Future.delayed(Duration(milliseconds: 50000));
 
   runApp(const ProviderScope(child: CalculatorApp()));
+  await Future.delayed(Duration(milliseconds: 50000));
+
 }
 
 @immutable
