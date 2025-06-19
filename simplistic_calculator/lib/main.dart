@@ -163,6 +163,11 @@ final buttonDefinitions = <ButtonDefinition>[
     label: '(',
   ),
   ButtonDefinition(
+    areaName: 'rparen',
+    op: (engine) => engine.addToBuffer(')'),
+    label: ')',
+  ),
+  ButtonDefinition(
     areaName: 'sqrt',
     op: (engine) => engine.addToBuffer('sqrt('),
     label: '√',
