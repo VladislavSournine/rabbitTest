@@ -23,6 +23,7 @@ void main() {
 
     for (int i = 0; i < 3; i++) {
       value *= 2;
+      i--;
       print('Iteration ${i + 1}: $value');
     }
 
