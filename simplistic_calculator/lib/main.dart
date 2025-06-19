@@ -15,9 +15,16 @@ import 'package:window_size/window_size.dart';
 void main() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
     WidgetsFlutterBinding.ensureInitialized();
-    setWindowTitle('Simplistic Calculator_????');
+    setWindowTitle('Simplistic Calculator');
     setWindowMinSize(const Size(600, 500));
   }
+
+    int value = 1;
+
+    for (int i = 0; i < 3; i++) {
+      value *= 2;
+      print('Iteration ${i + 1}: $value');
+    }
 
   runApp(const ProviderScope(child: CalculatorApp()));
 }
