@@ -19,13 +19,6 @@ void main() {
     setWindowMinSize(const Size(600, 500));
   }
 
-    int value = 1;
-
-    for (int i = 0; i < 3; i++) {
-      value *= 2;
-      print('Iteration ${i + 1}: $value');
-    }
-
   runApp(const ProviderScope(child: CalculatorApp()));
 }
 
